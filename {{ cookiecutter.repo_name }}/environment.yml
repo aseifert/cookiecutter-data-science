@@ -1,0 +1,14 @@
+channels:
+  - conda-forge
+dependencies:
+  - python={% if cookiecutter.python_interpreter == 'python3' %}3{% else %}2.7{% endif %}
+  - pip
+  - coverage
+  - flake8
+  - black
+  - fire
+  # - Sphinx
+  - jupyterlab
+  - python-dotenv>=0.5.1
+  - pip:
+    - -r requirements.txt
