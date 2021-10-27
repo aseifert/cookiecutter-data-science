@@ -54,6 +54,10 @@ else
 	aws s3 sync s3://$(BUCKET)/data/ data/ --profile $(PROFILE)
 endif
 
+## Lock python environment
+lock_environment:
+	conda-lock -f environment.yml -p osx-64 -p linux-64
+
 ## Set up python interpreter environment
 create_environment:
 ifeq (True,$(HAS_CONDA))
