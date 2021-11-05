@@ -87,3 +87,15 @@ target/
 
 # Mypy cache
 .mypy_cache/
+
+# streamlit secrets
+**/secrets.toml
+
+# wandb files
+wandb/
+
+# scraps
+**/scraps/
+
+# ignore files with leading underscores
+**/_*.*
